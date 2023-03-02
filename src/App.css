@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between; 
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.Disney-Logo{
+  width: 82px;
+  padding: 8px;
+}
+
+.nav-bar-menu{
+  align-items: center;
+  padding: 8px;
+  width: 700px;
+  list-style: none;
+  display: flex;
+  justify-content:space-around;
+
+}
+
+@media only screen and (max-width : 768px) {
+  .nav-bar-menu{
+    display: none;
+  }
+}
+.login-button{
+color: white;
+background-color: #040714;
+font-family: 'Raleway', sans-serif;
+background: #040714;
+padding-left: 6px;
+padding-right: 6px;
+padding-top: 5px;
+padding-bottom: 5px;
+width: 87px;
+text-align: center;
+border: 2px solid #ededed;
+border-radius: 6px;
+}
+
+li {
+  display: flex;
+  gap: 5px;
+
+}
+li a::before {
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  background-color: #FFF;
+}
+li a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+.nav-icon{
+  width: 20px;
+}
+
+.container{
+  background-image: url('./home-background.png');
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: #0b0b29 10px 10px 10px 10px;
+}
+
+.slide-img:hover{
+border-width: 2px;
+border-color: white;
+}
+.slick-dots li.slick-active button:before {
+    color:rgb(255, 255, 255) !important;
+}
+
+.slick-dots li  button:before{
+  color: #ededed !important;
+}
+
+.productions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 20px;
+}
+.Disney-div{
+  width: 190px;
+  top: 0;
+  border:  3px  solid #50515a ;
+  border-radius: 5px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  position :relative;
+
+}
+.Disney-div:hover {
+  border: 3px solid #ededed;
+  transition: 0.5s ease-in-out;
+}
+.Marvels-div{
+  width: 190px;
+  top: 0;
+  border:  3px  solid #50515a ;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  position :relative;
+
+}
+.Marvels-div:hover{
+  border: 3px solid #ededed;
+}
+.Starwars-div {
+  width: 190px;
+  top: 0;
+  border:  3px  solid #50515a ;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  position :relative;
+
+
+}
+.Starwars-div:hover {
+  border: 3px solid #ededed;
+}
+.Pixar-div{
+  width: 190px;
+  top: 0;
+  border:  3px  solid #50515a ;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  position :relative;
+
+}
+.Pixar-div:hover {
+  border: 3px solid #ededed;
+}
+.N-Geo-Div{
+  width: 190px;
+  top: 0;
+  border:  3px  solid #50515a ;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  position :relative;
+
+}
+.N-Geo-Div:hover{
+  border: 3px solid #ededed;
+  
+}
+.viewer-img{
+  width: 169px;
+  top: 0;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
-}
+  video {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  video:hover {
+    opacity: 100;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile-img{
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
   }
-}
+  .profile{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  .main-background{
+    background-image: url("./login-background.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    bottom: 0;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+ }
+  .home-first-img{
+    width: 500px;
+  }
+  .home-second-img {
+    width: 500px;
+
+  }
+  .explore-button {
+    width: 500px;
+    background-color: rgb(31 31 205);;
+    text-align: center;
+    padding: 10px;
+
+  }
+  .movies-div{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .movies-header{
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .movie{
+    width: 275px;
+    border:  3px  solid #50515a ;
+    border-radius: 5px;
+  box-shadow: #0a0a0c 4px 4px 40px 10px;
+  width: 275px;
+  border: 3px solid #50515a;
+  border-radius: 5px;
+  box-shadow: #131333 4px 4px 40px 10px;
+  cursor: pointer;
+    cursor: pointer;
+  }
+  .movie:hover{
+  border: 3px solid #ededed;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+
+  }
+
+  .movies-bar{
+    margin-top: 20px;
+    background-image: url('./home-background.png');
+    position: absolute;
+    width: 100%;
+  }
